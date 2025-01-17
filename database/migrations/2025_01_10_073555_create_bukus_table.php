@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('bukus', function (Blueprint $table) {
             $table->id();
-            $table->string('judul');
             $table->foreign('kategori_id')->references('id')->on('users');
+            $table->string('kode_buku');
+            $table->string('judul');
             $table->string('penulis');
             $table->string('penerbit');
             $table->string('tahun_terbit');
